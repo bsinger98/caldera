@@ -101,7 +101,7 @@ class Fact(BaseObject):
 
     def __eq__(self, other):
         if isinstance(other, Fact):
-            return self.unique == other.unique and self.source == other.source
+            return self.unique == other.unique and self.source == other.source and all(x == y for x, y in zip(self.collected_by, other.collected_by))
         return False
 
     def __init__(self, trait, value=None, score=1, source=None, origin_type=None, links=None,
