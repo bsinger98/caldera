@@ -2,7 +2,6 @@ import asyncio
 import os.path
 
 import pytest
-from unittest.mock import AsyncMock
 import random
 import string
 import uuid
@@ -63,6 +62,7 @@ from app.api.v2.responses import apispec_request_validation_middleware
 from app.api.rest_api import RestApi
 
 from app import version
+from tests import AsyncMock
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_DIR = os.path.join(DIR, '..', 'conf')
@@ -502,7 +502,7 @@ def test_agent(event_loop):
 
 @pytest.fixture
 def test_executor(test_agent):
-    return ExecutorSchema().load(dict(timeout=60, platform=test_agent.platform, name='linux', command='ls'))
+    return ExecutorSchema().load(dict(timeout=60, platform=test_agent.platform, name='sh', command='ls'))
 
 
 @pytest.fixture

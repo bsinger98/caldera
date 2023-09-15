@@ -17,13 +17,13 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/stale@9c1b1c6e115ca2af09755448e0dbba24e5061cc8
+    - uses: actions/stale@a20b814fb01b71def3bd6f56e7494d667ddf28da
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
-        stale-pr-message: 'This issue is stale because it has been open 20 days with no activity. Remove stale label or comment or this will be closed in 5 days'
-        stale-issue-message: 'This issue is stale because it has been open 20 days with no activity. Remove stale label or comment or this will be closed in 5 days'
+        stale-pr-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days'
+        stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days'
         exempt-issue-labels: 'feature,keep'
-        days-before-stale: 20
-        days-before-close: 5
+        days-before-stale: 30
+        days-before-close: 7
