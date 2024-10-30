@@ -95,8 +95,8 @@ class Fact(BaseObject):
         if executor not in escape_ref:
             return self.value
         escaped_value = str(self.value)
-        for char in escape_ref[executor]['special']:
-            escaped_value = escaped_value.replace(char, (escape_ref[executor]['escape_prefix'] + char))
+        # for char in escape_ref[executor]['special']:
+        #    escaped_value = escaped_value.replace(char, (escape_ref[executor]['escape_prefix'] + char))
         return escaped_value
 
     def __eq__(self, other):
