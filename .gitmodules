@@ -46,3 +46,9 @@
 [submodule "plugins/emu"]
 	path = plugins/emu
 	url = https://github.com/mitre/emu.git
+[submodule "plugins/IncalmoCalderaPlugin"]
+	path = plugins/IncalmoCalderaPlugin
+	url = git@github.com:DeceptionProjects/IncalmoCalderaPlugin.git
+[submodule "plugins/deception"]
+	path = plugins/deception
+	url = git@github.com:DeceptionProjects/IncalmoCalderaPlugin.git
